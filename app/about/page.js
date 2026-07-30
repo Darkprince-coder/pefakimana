@@ -3,6 +3,7 @@ import PageHeader from "@/components/PageHeader";
 import SectionHeading from "@/components/SectionHeading";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import leadership from "@/data/leadership";
+import images from "@/data/images";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -16,6 +17,7 @@ export default function AboutPage() {
         eyebrow="Our Story"
         title="Rooted in Kimana, reaching beyond"
         description="PEFA Kimana is part of the Pentecostal Evangelistic Fellowship of Africa, a family of believers committed to sound teaching, honest worship and practical love for our neighbours."
+        image={images.hero.about}
       />
 
       {/* STORY */}
@@ -25,6 +27,7 @@ export default function AboutPage() {
             label="PEFA Kimana Congregation"
             tone="acacia"
             ratio="4 / 3"
+            src={images.about.story}
           />
           <div>
             <SectionHeading
@@ -140,6 +143,7 @@ export default function AboutPage() {
                   label={person.name}
                   tone="indigo"
                   ratio="1 / 1"
+                  src={images.leadership[person.id]}
                 />
                 <h3>{person.name}</h3>
                 <span className={styles.leaderRole}>{person.role}</span>

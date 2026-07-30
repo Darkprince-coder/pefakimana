@@ -1,7 +1,7 @@
 const leadership = [
   {
     id: "l1",
-    name: "Pastor Joseph Mailu",
+    name: "Pastor Joseph Lomonyak",
     role: "Senior Pastor",
     bio: "Has led PEFA Kimana since 2014, with a heart for discipleship and community outreach across Kajiado County."
   },

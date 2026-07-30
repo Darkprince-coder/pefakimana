@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import PlaceholderImage from "./PlaceholderImage";
 import { galleryCategories } from "@/data/gallery";
+import images from "@/data/images";
 import styles from "./GalleryGrid.module.css";
 
 const tones = ["terracotta", "acacia", "amber", "indigo"];
@@ -50,6 +51,7 @@ export default function GalleryGrid({ photos }) {
               label={photo.label}
               tone={tones[i % tones.length]}
               ratio="1 / 1"
+              src={images.gallery[photo.id]}
             />
           </button>
         ))}
@@ -89,6 +91,7 @@ export default function GalleryGrid({ photos }) {
                 label={filtered[openIndex].label}
                 tone={tones[openIndex % tones.length]}
                 ratio="4 / 3"
+                src={images.gallery[filtered[openIndex].id]}
               />
               <p className={styles.caption}>{filtered[openIndex].label}</p>
             </motion.div>

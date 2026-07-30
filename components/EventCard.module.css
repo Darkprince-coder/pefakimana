@@ -4,7 +4,7 @@
   background: var(--cream);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  padding: 22px;
+  padding: 18px;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
@@ -13,37 +13,47 @@
   transform: translateY(-3px);
 }
 
-.dateBlock {
+.poster {
+  position: relative;
   flex-shrink: 0;
-  width: 68px;
-  height: 68px;
-  border-radius: var(--radius-sm);
+  width: 84px;
+}
+
+.dateBlock {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
   background: var(--terracotta);
   color: var(--cream);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: var(--shadow-soft);
 }
 
 .day {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 0.95rem;
   font-weight: 700;
   line-height: 1;
 }
 
 .month {
-  font-size: 0.7rem;
+  font-size: 0.55rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-top: 3px;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
 }
 
 .body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding: 4px 4px 4px 0;
 }
 
 .category {
@@ -77,4 +87,15 @@
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .poster {
+    width: 100%;
+    max-width: 160px;
+  }
 }

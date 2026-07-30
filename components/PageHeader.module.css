@@ -1,5 +1,7 @@
 .header {
-  background: var(--dusk-indigo);
+  background-color: var(--dusk-indigo);
+  background-size: cover;
+  background-position: center;
   color: var(--cream);
   padding: 64px 0;
 }

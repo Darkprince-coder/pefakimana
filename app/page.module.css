@@ -1,8 +1,8 @@
 .hero {
-  background: var(--dusk-indigo);
-  color: var(--cream);
+  background-color: var(--dusk-indigo);
   padding: 76px 0 90px;
   overflow: hidden;
+  color: var(--cream);
 }
 
 .heroInner {
@@ -234,5 +234,23 @@
   .eventsHead {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .hero {
+    background-image: linear-gradient(
+        rgba(23, 28, 48, 0.62),
+        rgba(23, 28, 48, 0.82)
+      ),
+      var(--hero-bg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .heroImage {
+    display: none;
+  }
+
+  .heroBadge {
+    display: none;
   }
 }

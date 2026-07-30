@@ -1,4 +1,5 @@
 import { FolderHeart, ExternalLink, CalendarDays } from "lucide-react";
+import images from "@/data/images";
 import PlaceholderImage from "./PlaceholderImage";
 import styles from "./AlbumCard.module.css";
 
@@ -19,6 +20,7 @@ export default function AlbumCard({ album, index = 0 }) {
         label={album.category}
         tone={tones[index % tones.length]}
         ratio="4 / 3"
+        src={images.albums[album.id]}
       />
       <div className={styles.body}>
         <span className={styles.date}>

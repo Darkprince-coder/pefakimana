@@ -30,27 +30,31 @@ export const givingChannels = [
     method: "M-Pesa Paybill",
     icon: "Smartphone",
     detail: "Paybill No. 000000",
-    note: "Account Number: Specify Tithe, Offering, Building or Missions"
+    note: "Account Number: Specify Tithe, Offering, Building or Missions",
+    copyable: true
   },
   {
     id: "g2",
     method: "Bank Transfer",
     icon: "Landmark",
     detail: "PEFA Kimana Church, Acc. No. 0000000000",
-    note: "Sample Bank, Kimana Branch"
+    note: "Sample Bank, Kimana Branch",
+    copyable: true
   },
   {
     id: "g3",
     method: "Give Online",
     icon: "CreditCard",
     detail: "Secure card and mobile money giving",
-    note: "Opens our online giving page"
+    note: "Opens our online giving page",
+    copyable: false
   },
   {
     id: "g4",
     method: "In Service",
     icon: "HandCoins",
     detail: "Offering bags and boxes",
-    note: "Available at every Sunday and midweek service"
+    note: "Available at every Sunday and midweek service",
+    copyable: false
   }
 ];

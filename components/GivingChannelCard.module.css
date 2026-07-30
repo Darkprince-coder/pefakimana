@@ -25,7 +25,7 @@
 
 .card h3 {
   font-size: 1.05rem;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .detail {
@@ -34,8 +34,43 @@
   color: var(--dusk-indigo);
 }
 
+.copyRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  background: var(--sand-dark);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.copyRow:hover {
+  border-color: var(--terracotta);
+}
+
+.copyIcon {
+  color: var(--terracotta-dark);
+  flex-shrink: 0;
+}
+
+.copiedIcon {
+  color: var(--acacia-dark);
+  flex-shrink: 0;
+}
+
 .note {
   font-size: 0.85rem;
   color: var(--charcoal-soft);
-  margin-top: 6px;
+  margin-top: 8px;
+}
+
+.copiedTag {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--acacia-dark);
 }

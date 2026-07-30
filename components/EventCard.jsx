@@ -1,4 +1,6 @@
 import { CalendarDays, Clock, MapPin } from "lucide-react";
+import images from "@/data/images";
+import PlaceholderImage from "./PlaceholderImage";
 import styles from "./EventCard.module.css";
 
 function formatDate(dateStr) {
@@ -11,12 +13,21 @@ function formatDate(dateStr) {
 
 export default function EventCard({ event }) {
   const { day, month } = formatDate(event.date);
+  const poster = images.events[event.id];
 
   return (
     <article className={styles.card}>
-      <div className={styles.dateBlock}>
-        <span className={styles.day}>{day}</span>
-        <span className={styles.month}>{month}</span>
+      <div className={styles.poster}>
+        <PlaceholderImage
+          label="Event Poster"
+          tone="amber"
+          ratio="3 / 4"
+          src={poster}
+        />
+        <div className={styles.dateBlock}>
+          <span className={styles.day}>{day}</span>
+          <span className={styles.month}>{month}</span>
+        </div>
       </div>
 
       <div className={styles.body}>

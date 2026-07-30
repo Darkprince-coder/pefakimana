@@ -1,6 +1,7 @@
 import { MapPin, Phone, Mail, Clock, Facebook, Youtube, Instagram } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import ContactForm from "./ContactForm";
+import images from "@/data/images";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default function ContactPage() {
         eyebrow="Get In Touch"
         title="We would love to hear from you"
         description="Whether it's a prayer request, a question about visiting, or a way to get involved, reach out and someone from our team will respond."
+        image={images.hero.contact}
       />
 
       <section className="section">

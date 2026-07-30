@@ -19,6 +19,7 @@ import SermonCard from "@/components/SermonCard";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import events from "@/data/events";
 import sermons from "@/data/sermons";
+import images from "@/data/images";
 import styles from "./page.module.css";
 
 export default function HomePage() {
@@ -30,7 +31,14 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className={styles.hero}>
+      <section
+        className={styles.hero}
+        style={
+          images.hero.home
+            ? { "--hero-bg": `url(${images.hero.home})` }
+            : undefined
+        }
+      >
         <div className={`container ${styles.heroInner}`}>
           <div className={styles.heroText}>
             <span className={styles.heroEyebrow}>PEFA Kimana</span>
@@ -67,6 +75,7 @@ export default function HomePage() {
               label="Sunday Worship Service, PEFA Kimana"
               tone="terracotta"
               ratio="4 / 5"
+              src={images.hero.home}
             />
             <div className={styles.heroBadge}>
               <Image

@@ -1,49 +1,84 @@
 .card {
-  background: var(--cream);
-  border: 1px solid var(--line);
+  position: relative;
   border-radius: var(--radius-md);
-  padding: 26px 24px;
+  overflow: hidden;
+  min-height: 280px;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--sand-dark);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
+  transform: translateY(-4px);
   box-shadow: var(--shadow-soft);
-  transform: translateY(-3px);
-  border-color: transparent;
+}
+
+/* Fallback tones when a ministry has no photo yet, applied as a class
+   only in that case, an inline background-image (a real photo) always
+   wins over these since it is set directly on the element style. */
+.terracotta {
+  background-color: #d9784f;
+}
+
+.acacia {
+  background-color: #6f7f5c;
+}
+
+.amber {
+  background-color: #eab868;
+}
+
+.indigo {
+  background-color: #3a4368;
+}
+
+.overlay {
+  margin-top: auto;
+  width: 100%;
+  padding: 22px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(
+    to top,
+    rgba(23, 20, 17, 0.92) 10%,
+    rgba(23, 20, 17, 0.55) 60%,
+    transparent 100%
+  );
+  color: var(--cream);
 }
 
 .iconWrap {
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  background: var(--sand-dark);
-  color: var(--terracotta-dark);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 251, 243, 0.16);
+  backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .name {
+  color: var(--cream);
   font-size: 1.08rem;
   font-weight: 600;
 }
 
 .desc {
-  font-size: 0.9rem;
-  color: var(--charcoal-soft);
-  flex: 1;
+  font-size: 0.88rem;
+  color: rgba(255, 251, 243, 0.85);
 }
 
 .footer {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  font-size: 0.8rem;
-  color: var(--acacia-dark);
+  font-size: 0.78rem;
+  color: var(--amber);
   font-weight: 600;
   padding-top: 10px;
-  border-top: 1px dashed var(--line);
+  border-top: 1px solid rgba(255, 251, 243, 0.18);
 }

@@ -3,6 +3,7 @@ import PageHeader from "@/components/PageHeader";
 import SectionHeading from "@/components/SectionHeading";
 import GivingChannelCard from "@/components/GivingChannelCard";
 import { givingCategories, givingChannels } from "@/data/giving";
+import images from "@/data/images";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -16,6 +17,7 @@ export default function GivingPage() {
         eyebrow="Giving"
         title="Give cheerfully, sow generously"
         description="Every gift, however small, becomes part of what God is doing through PEFA Kimana, in our sanctuary, our children's ministry, and our outreach to the villages around us."
+        image={images.hero.giving}
       />
 
       <section className={`section ${styles.verseSection}`}>

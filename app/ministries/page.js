@@ -3,6 +3,7 @@ import SectionHeading from "@/components/SectionHeading";
 import MinistryCard from "@/components/MinistryCard";
 import Button from "@/components/Button";
 import ministries from "@/data/ministries";
+import images from "@/data/images";
 import { ArrowRight } from "lucide-react";
 import styles from "./page.module.css";
 
@@ -17,6 +18,7 @@ export default function MinistriesPage() {
         eyebrow="Ministries"
         title="Serving God and one another"
         description="Every ministry at PEFA Kimana exists to help someone take a next step, in worship, in discipleship, or in service to our community."
+        image={images.hero.ministries}
       />
 
       <section className="section">
@@ -26,8 +28,8 @@ export default function MinistriesPage() {
             title="Our Ministry Families"
           />
           <div className={styles.grid}>
-            {ministries.map((ministry) => (
-              <MinistryCard key={ministry.id} ministry={ministry} />
+            {ministries.map((ministry, i) => (
+              <MinistryCard key={ministry.id} ministry={ministry} index={i} />
             ))}
           </div>
         </div>
