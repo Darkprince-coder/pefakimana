@@ -1,0 +1,94 @@
+:root {
+  /* Earthy palette, inspired by the Kimana / Amboseli landscape */
+  --terracotta: #c1502e;
+  --terracotta-dark: #953c22;
+  --acacia: #4a5a3a;
+  --acacia-dark: #333f28;
+  --amber: #e2a23b;
+  --amber-dark: #b97e26;
+  --dusk-indigo: #232a45;
+  --dusk-indigo-dark: #171c30;
+  --sand: #f6efe2;
+  --sand-dark: #ece0c9;
+  --cream: #fffbf3;
+  --charcoal: #2a2420;
+  --charcoal-soft: #56504a;
+  --line: rgba(42, 36, 32, 0.12);
+
+  --font-display: var(--font-fraunces), "Georgia", serif;
+  --font-body: var(--font-worksans), "Segoe UI", sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 26px;
+
+  --shadow-soft: 0 12px 30px -14px rgba(35, 42, 69, 0.35);
+  --shadow-lift: 0 20px 45px -18px rgba(35, 42, 69, 0.45);
+
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--sand);
+  color: var(--charcoal);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--dusk-indigo);
+  margin: 0;
+  line-height: 1.15;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 88px 0;
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 56px 0;
+  }
+}

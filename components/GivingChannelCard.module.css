@@ -1,0 +1,41 @@
+.card {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 26px 24px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-3px);
+}
+
+.iconWrap {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--sand-dark);
+  color: var(--acacia-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.detail {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dusk-indigo);
+}
+
+.note {
+  font-size: 0.85rem;
+  color: var(--charcoal-soft);
+  margin-top: 6px;
+}
