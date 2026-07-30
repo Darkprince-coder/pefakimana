@@ -43,7 +43,7 @@ const images = {
     m5: "/images/ministries/men.jpg", // Men's Fellowship
     m6: "/images/ministries/outreach.jpg", // Outreach & Missions
     m7: "/images/ministries/intercessory.jpg", // Intercessory Prayer Team
-    m8: "/images/ministries/ushering.jpg"  // Ushering & Protocol
+    m8: "/images/ministries/usher.jpg"  // Ushering & Protocol
   },
 
   leadership: {
