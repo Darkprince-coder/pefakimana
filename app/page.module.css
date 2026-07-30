@@ -2,6 +2,7 @@
   background-color: var(--dusk-indigo);
   padding: 76px 0 90px;
   overflow: hidden;
+  position: relative;
   color: var(--cream);
 }
 
@@ -10,10 +11,8 @@
   grid-template-columns: 1.05fr 0.85fr;
   gap: 56px;
   align-items: center;
-}
-
-.heroText {
-  max-width: 560px;
+  position: relative;
+  z-index: 2;
 }
 
 .heroEyebrow {
@@ -81,7 +80,18 @@
   justify-content: center;
   box-shadow: var(--shadow-lift);
 }
-
+/* soft black gradient at the bottom to blend into the next section */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 180px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.65) 100%);
+  z-index: 1;
+}
 .verseSection {
   padding-top: 64px;
   padding-bottom: 64px;
@@ -244,6 +254,19 @@
       var(--hero-bg);
     background-size: cover;
     background-position: center;
+    /* occupy full viewport on small screens */
+    min-height: 100vh;
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .heroInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 48px);
+    gap: 32px;
   }
 
   .heroImage {
